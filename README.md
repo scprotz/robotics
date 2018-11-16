@@ -21,84 +21,62 @@ Here are the quick steps:
 
 3)  Install Etcher and run it.  Use a Micro-SD from 8GB-32GB for your ev3dev image.  IT WILL BE ERASED.  Let me say that again.  IT WILL BE ERASED.
 
-4)  Etcher will asked for an image.  Unzip the one from step 1.  On some computers this might be called 'extract'.  Just extract it somewhere that you know (like your Downloads folder).  Point Etcher to it.  Also when Etcher asks, point it to the SD card.  This will make an EV3DEV image for your Mindstorms.
+4)  Etcher will asked for an image.  Unzip the one from step 1.  On some computers this might be called 'extract'.  Just extract it somewhere that you know (like your Downloads folder).  Point Etcher to it.  Also when Etcher asks, point it to the SD card.  This will make an EV3DEV image for your Mindstorms.  Make sure to tell Etcher to burn it.
 
 
-WooHoo!.  Take the Micro-SD and put it in your Mindstorms and start it.  You should be all set.
+WooHoo!  Take the Micro-SD and put it in your Mindstorms and start it.  You should be all set.
 
 ### Setting up your computer
 
-What things you need to install the software and how to install them
+For our team, we are going to start with Python3.  To get Python3 working on your computer the way we will all use it, you will need to install the following software (If you do not have administrator priviliges on your computer, this should all still work, but there may be extra steps to get it working just right).
 
-```
-Give examples
-```
+1) Python3
+2) Pip3
+3) Java (version 8 or higher - 8 is recommended)
+4) Eclipse
+5) Filezilla
+6) SSH
 
-### Installing
+Wow - That is a lot of software.  Let's review WHY we need all that software.
 
-A step by step series of examples that tell you how to get a development env running
+1)  You need to install Python3 because this is the language we'll be programming in.
+2)  Pip3 is needed to add stuff to your Python (like the ev3dev libraries that let us talk to things like motors and sensors)
+3)  Java is needed because we are going to use the Eclipse framework  (there are other options, but Eclipse works great and gets the job done)
+4)  Eclipse is where we will be programming stuff, mainly our Python3
+5)  Filezilla is a nice little file-mover program.  It is very useful when moving files to your mindstorms robot because you can just drag and drop
+6)  SSH is for when you really just need to get on the robot and run stuff directly.  It will start up a command line for you to work on the mindstorms.
 
-Say what the step will be
+#### Windows TBD
+
+#### MAC TBD
+
+#### Linux TBD
+
+
+#### Set up Python3 with Pip3
+
+#### Set up Eclipse with PyDev
+
+
+### Running a Program
+
+At this point, the assumption is that you have the robot running EV3DEV and your computer is up and running with Eclipse.
 
 ```
 Give the example
 ```
 
-And repeat
+## * Save this page as a Cheat Sheet
+## * Save this page as a Cheat Sheet
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Dave Mobley**
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the AGPL License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
