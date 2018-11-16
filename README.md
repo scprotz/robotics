@@ -48,26 +48,160 @@ Wow - That is a lot of software.  Let's review WHY we need all that software.
 
 #### Windows TBD
 
+If you have admin rights, it is best if you install python3, pip3, and ssh(openssh) from cygwin.
+
+If you do not have admin rights, then you'll need to get the .zip version of python3.  You will also want to use `putty` instead of ssh.  It is a simple Windows program to do ssh and doesn't require admin rights.
+
+Install Java from the Oracle website.
+
+Use the installer version of Eclipse (not the zip file version).
+
+Install Filezilla if you have admin rights.   If you do not, then get the zip version or dmg version and just run it from there when needed.
+
 #### MAC TBD
 
+It is recommended to install Python3 and Pip3 from homebrew.  Your mac system already has SSH.
+
+Install Java from the Oracle website.
+
+Use the installer version of Eclipse (not the zip file version).
+
+Install Filezilla if you have admin rights.   If you do not, then get the zip version or dmg version and just run it from there when needed.
+
+
 #### Linux TBD
+
+Python3 will almost assuredly be installed as will pip3.  SSH should be installed too, but if not, install openssh
+
+Install Java based on your Linux version.
+ 
+Use the installer version of Eclipse (not the zip file version).
+
+Install Filezilla if you have admin rights.   If you do not, then get the zip version or dmg version and just run it from there when needed.
+
+```
+sudo apt-get install filezilla
+```
 
 
 #### Set up Python3 with Pip3
 
+On a command line (refer back up to your particular installation for help with this), you should be able to run a command like this:
+
+```
+pip3 install python-ev3dev2
+```
+
+If your installation used the `pip` variation instead of `pip3`, then try it as:
+
+```
+pip install python-ev3dev2
+```
+After it completes, your python environment now has the libraries you'll need to talk to the mindstorm.
+
+
 #### Set up Eclipse with PyDev
 
+Inside Eclipse, you will need to install the python tools so you can program there.  After you start eclipse, at the top you have the option `Help` and under it `Install New Software`.  Choose that.  It'll bring up a window where you can type in a url.  Put in the url [https://pydev.org/updates]
+
+Once you've done that, you will now have 2 options.  Choose the first one that comes up `PyDev`  You don't need the PyDev Mylyn Integration (optional).
+
+Just click Next.  Accept the terms and conditions and Finish.  Eclipse will restart and you are ready to make a Python3 program.
+
+Once it restarts, you need to choose `File`, `New Project`, and pick a `PyDev project`.  Call it `Hello World`.  
+
+Since this is our first time using Python with Eclipse, we have to tell Eclipse which Python to use.  Click on the link that says `Click here to configure an intrepreter`.  On Mac and Linux it will most likely find it for you.  On Windows, you'll have to navigate to the directory it was installed in.  
+
+Once you've set the python interpreter, Apply it and then Finish creating the project.
 
 ### Running a Program
 
-At this point, the assumption is that you have the robot running EV3DEV and your computer is up and running with Eclipse.
+You should be in your `Hello World` project.  Right click on the project and create a new file.  call the file `helloworld.py`
+
+Once the file is open,  type in the following: 
+
 
 ```
-Give the example
+print('I am Alive!')
 ```
 
-## * Save this page as a Cheat Sheet
-## * Save this page as a Cheat Sheet
+Save the file.  Click the Run button (the green arrow at the top of Eclipse).  In the console at the bottom of Eclipse you should see output that says:
+
+```
+I am Alive!
+```
+
+Congratulations.  Your first Python3 program for Robotics.  Now let's let the Robot do it.
+
+
+### Make sure the Robot is connected and Run
+
+#### Tethering
+
+If you use a USB cable, when you connect it to the robot and your computer, you'll need to go into the menu on the robot under networking and look under tethering.  Make sure to select the `gadget` option.  This will give the robot an IP address.  You'll need that in a moment to move files over.
+
+#### WiFi
+
+If you have a Wifi adapter for your robot, you need to go into the network settings and connect the robot to your router.  Once it is connected (you may have to enter a password) it will then show you an IP address.  You'll need that in a moment to move files over.
+
+#### Moving Files Over
+
+Start Filezilla.  At the top it has three things to fill in.  The first is the address.  Type
+```
+sftp://<robot ip address>
+```
+
+You'll also need to enter the username and password.  They are the defaults:
+
+```
+user: robot
+password: maker
+```
+Do a quick connect.  If it asks you to accept access to the robot the first time, say yes and continue.
+
+On the left hand side you can see your files on your computer.  On the right are files on the robot.  Navigate to your `helloworld.py` file.  Drag it over to the robot.  The file is moved.  Voila!
+
+#### Run the File on the Robot
+
+Start your ssh program (command line or putty for Windows).  For ssh, on a command line type:
+
+```
+ssh robot@robot-ip-address
+```
+
+It may again ask you to accept.  Say yes.  Enter the password:
+
+```
+maker
+```
+
+For putty, just fill in the ip address, user name, and password just like on Filezilla.
+
+Once this is done, you should have a console that says something like:
+
+```
+robot>
+```
+
+You can now run your program by typing:
+
+```
+python3 helloworld.py
+```
+
+If you get back
+
+```
+I am Alive!
+```
+
+Then you are all done.  If not, check your steps and try to figure out where it went wrong.  This is good practice for game day so you can react to problems quickly.
+
+### Next Steps
+[Writing a Program to control Motors] (Motors.md)
+[Writing a Program to read Sensors] (Sensors.md)
+[Reviewing the RCX Challange information] (RCX.md)
+[Reviewing World Robotic Olympiad information] (WRO.md)
 
 
 ## Authors
