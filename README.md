@@ -198,10 +198,10 @@ I am Alive!
 Then you are all done.  If not, check your steps and try to figure out where it went wrong.  This is good practice for game day so you can react to problems quickly.
 
 ### Next Steps
-[Writing a Program to control Motors] (Motors.md)
-[Writing a Program to read Sensors] (Sensors.md)
-[Reviewing the RCX Challange information] (RCX.md)
-[Reviewing World Robotic Olympiad information] (WRO.md)
+[Writing a Program to control Motors](Motors.md)
+[Writing a Program to read Sensors](Sensors.md)
+[Reviewing the RCX Challange information](RCX.md)
+[Reviewing World Robotic Olympiad information](WRO.md)
 
 
 ## Authors
